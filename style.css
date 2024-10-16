@@ -1,0 +1,283 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+}
+
+.container {
+    top: 0;
+}
+
+.top {
+    width: 100%;
+    height: 25px;
+    background-color: gold;
+}
+
+.order {
+    transform: translateY(-25px);
+    z-index: 11;
+    width: 300px;
+    margin-left: 50px;
+}
+
+.order a {
+    text-decoration: none;
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-size: 3rem;
+    color: black;
+    text-shadow: 1px 1px 2px gold;
+
+}
+
+/* navbar */
+nav {
+    margin-top: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    z-index: 10;
+}
+
+nav img {
+    width: 7%;
+    padding: 0 0 0 30px;
+    transform: translateY(-12px);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: black;
+    margin-right: 30px;
+    border: 1px solid grey;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+nav ul li a:hover {
+    box-shadow: 2px 2px 5px gold;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-right: 30px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: black;
+    font-weight: 600;
+}
+
+.fa-solid {
+    font-size: 1rem;
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    height: 240px;
+    margin-top: 50px;
+    overflow: hidden;
+    /* Hide overflow to keep slides within the page area */
+    position: relative;
+    /* Ensure the slider is positioned correctly */
+}
+
+.slides {
+    display: flex;
+    height: 100%px;
+    width: 200%;
+    /* Adjust width to fit all slides */
+    animation: slide 20s infinite linear;
+    /* Adjust duration as needed */
+}
+
+.slides img {
+    width: 50%;
+    /* Each image takes up half the width of the slides container */
+    height: 240px;
+    /* Fit images to the slider height */
+    flex-shrink: 0;
+
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+        /* Move slides fully to the left */
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* Cards */
+
+/* top text with heart */
+.love {
+    width: 80%;
+    margin: 30px auto 10px auto;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+    border-bottom: 2px solid red;
+}
+
+.love img {
+    width: 25px;
+}
+
+/* card container */
+.card-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+/* card items box */
+.pizza-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 400px;
+    margin: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pizza-heading {
+    font-size: 0.9rem;
+    margin: 5px 10px;
+}
+
+.pizza-details {
+    font-size: 0.7em;
+    margin: 5px 10px;
+    color: #555;
+}
+
+.card-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.01), goldenrod);
+}
+
+.card-image img {
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 10px;
+}
+
+.pizza-price {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.add-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+
+/* deal image in cards */
+#deal1-img, #deal2-img, #deal3-img, #deal4-img {
+    width: 400px;
+    height: 150px;
+    margin-left: 0;
+}
+/* Footer */
+.footer-img {
+    width: 10%;
+    display: block;
+    margin: auto;
+    transform: translateY(80px);
+}
+.footer-box {
+    width: 100%;
+    margin-top: 30px;
+    border-top: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f0eeee;
+}
+
+.footer-box ul li {
+    list-style: none;
+}
+
+.footer-box ul li a {
+    text-decoration: none;
+    color: grey;
+    font-size: 0.7rem;
+}
+
+.footer-box ul li a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.footer-box ul li a i {
+    font-size: 1rem;
+}
+
+.footer-box ul li a i:hover {
+    color: black;
+}
+
+.footer-box ul li h3 {
+    color: black;
+    font-size: 0.8rem;
+}
+
+/* Footer bottom box */
+.footer-bottom {
+    background-color: #4b4b4b;
+    color: white;
+    border-top: 1px solid grey;
+    padding: 10px 0;
+    font-size: 0.7rem;
+    text-align: center;
+    bottom: 0;
+}
